@@ -26,11 +26,15 @@ const MONGO_URI = process.env.DATABASE_URL;
 
 app.use(
   cors({
-    origin: [process.env.ORIGIN],
+    origin:  'https://chat-friendly-chat-app-frontend.onrender.com',
     methods:["GET","POST","PUT","PATCH","DELETE"],
     credentials:true
   })
 );
+
+// app.use(cors({
+//   origin: 'https://chat-friendly-chat-app-frontend.onrender.com', // or use '*' to allow all origins
+// }));
 
 app.use("/uploads/profiles", express.static("uploads/profiles"))
 app.use("/uploads/files", express.static("uploads/files"));
