@@ -26,7 +26,7 @@ const MONGO_URI = process.env.DATABASE_URL;
 
 app.use(
   cors({
-    origin:  'https://chat-friendly-chat-app.onrender.com',
+    origin:  'https://chat-friendly-chat-app-frontend.onrender.com',
     methods:["GET","POST","PUT","PATCH","DELETE"],
     credentials:true
   })
